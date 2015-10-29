@@ -1,0 +1,173 @@
+/** colors
+
+CAD788 - theme green
+FBC0AA - theme pink
+FAAE92 - darker pink
+
+**/
+
+@font-face {
+    font-family: Silom;
+    src: url(../fonts/Silom.ttf);
+}
+@font-face {
+    font-family: OratorStd;
+    src: url(../fonts/OratorStd.otf);
+}
+@import url(https://fonts.googleapis.com/css?family=Dosis);
+
+/*font fix*/
+/*body {
+    -webkit-animation-delay: 0.1s;
+    -webkit-animation-name: fontfix;
+    -webkit-animation-duration: 0.1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes fontfix {
+    from { opacity: 1; }
+    to   { opacity: 1; }
+}*/
+
+
+/*DOM elements*/
+p{
+  text-align:center;
+  font-size:30px;
+  font-family:'OratorStd';
+}
+body:hover{
+  cursor:default;
+}
+a, a:hover{
+  color:black;
+}
+
+
+/*menu*/
+.menu:hover{
+  text-decoration:underline;
+  color:black;
+}
+
+.sub-port, .sub-blog{
+  letter-spacing:-5px;
+}
+
+#title{
+  font-size:35px;
+  font-family:'Silom';
+}
+
+#subtitle{
+  font-size:25px;
+  font-family:'OratorStd';
+}
+
+
+/*social icons*/
+.social:hover, .social:visited, .social:focus, .social:active{
+  color:#FAAE92;
+}
+
+
+/*about*/
+#about-text{
+  font-family:'Georgia','serif';
+  font-size:12pt;
+}
+
+/*portfolio*/
+li{
+  margin-left:-10px;
+  list-style-type: none;
+}
+
+li.no-tab{
+  margin-left:-40px;
+}
+
+.code-port-header{
+  font-size:13pt;
+  margin-top:10px;
+  font-weight:bold;
+}
+
+#code-port-1{
+  background-image:url('../assets/vote.jpg');
+}
+
+#code-port-2{
+  background-image:url('../assets/campaign.png');
+}
+
+#code-port-3{
+  background-image:url('../assets/care.png');
+}
+
+#code-port-1, #code-port-2, #code-port-3{
+  height:200px;
+  width:200px;
+  border:3px solid #CAD788;
+  border-radius:3px;
+}
+
+@media (max-width:980px){
+  #code-port-1, #code-port-2, #code-port-3{
+    margin:0 0 20px 15vw;
+  }
+}
+
+#more, #more-writing{
+  font-family:'OratorStd';
+  font-size:20px;
+  margin-top:10px;
+}
+
+
+/*standards*/
+.container{
+  margin-top:10vw;
+}
+.coding:hover{
+  color:#CAD788;
+}
+.writing:hover{
+  color:#FBC0AA;
+}
+
+/*template*/
+.max-width{
+  max-width:900px;
+}
+#home-icon{
+  font-size:30px;
+  float:left;
+  text-align:left;
+}
+#home-icon:hover{
+  color:#CAD788;
+}
+.temp-icon{
+  font-size:30px;
+  margin:5px;
+}
+.temp-icon:hover{
+  color:#FAAE92;
+}
+.temp-content{
+  /*margin-top:5px;*/
+  font-family:'Dosis';
+  font-size:12pt;
+  text-align:left;
+}
+.temp-header{
+  font-family:'Silom';
+}
+#temp-img, #temp-img2{
+  height:200px;
+}
+#temp-img2{
+  margin-top:20px;
+}
