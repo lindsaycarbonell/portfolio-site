@@ -73,9 +73,18 @@ a, a:hover{
 
 
 /*about*/
-#about-text{
+.about-text{
   font-family:'Georgia','serif';
   font-size:12pt;
+}
+.about-sub{
+  font-family:'Georgia','serif';
+  font-size:8pt;
+}
+#pokemon-pic, #universe-pic, #gravity-pic, #steam-pic{
+  display:inline-block;
+  vertical-align: bottom;
+  height:20px;
 }
 
 /*portfolio*/
@@ -95,15 +104,15 @@ li.no-tab{
 }
 
 #code-port-1{
-  background-image:url('../assets/vote.jpg');
+  background-image:url('../assets/vote.png');
 }
 
 #code-port-2{
-  background-image:url('../assets/campaign.png');
+  background-image:url('../assets/campaign-sm.png');
 }
 
 #code-port-3{
-  background-image:url('../assets/care.png');
+  background-image:url('../assets/prototype-sm.jpg');
 }
 
 #code-port-1, #code-port-2, #code-port-3{
