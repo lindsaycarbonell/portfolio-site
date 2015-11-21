@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <head>
+  <title>Lindsay Carbonell, interactive storyteller</title>
 <link rel="shortcut icon" type="image/ico" href="assets/favicon.ico" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/jquery.smooth-scroll.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/styles.css" />
+
 </head>
 
 <body>
@@ -28,7 +31,7 @@
 
   <div class="row">
       <div class="col-lg-4 col-lg-offset-4">
-          <a id="about" class="menu"><p>ABOUT</p></a>
+          <a href="#about-scroll" id="about" class="menu"><p>ABOUT</p></a>
       </div>
   </div>
 
@@ -38,8 +41,8 @@
           <li class="no-tab">
             <a id="portfolio" class="menu"><p>PORTFOLIO</p></a>
               <ul>
-                <li class="sub-port"><p id="code-port" class="coding"><i class="fa fa-code"></i> coding</p></li>
-                <li class="sub-port"><p id="write-port" class="writing"><i class="fa fa-pencil"></i> writing</p></li>
+                <a href="#code-port"><li class="sub-port"><p id="code-port" class="coding"><i class="fa fa-code"></i> coding</p></li></a>
+                <a href="#write-port"><li class="sub-port"><p id="write-port" class="writing"><i class="fa fa-pencil"></i> writing</p></li></a>
               </ul>
           </li>
         </ul>
@@ -52,7 +55,7 @@
       </div>
   </div>
 
-  <div class="row">
+  <!-- <div class="row">
       <div class="col-lg-4 col-lg-offset-4">
         <ul>
           <li class="no-tab">
@@ -72,7 +75,7 @@
           </li>
         </ul>
       </div>
-  </div>
+  </div> -->
 
   <div class="row" style="margin-top:5vw;">
       <div id="content-box" class="col-lg-8 col-lg-offset-2 col-sm-offset-2 col-sm-8 col-xs-10 col-xs-offset-1">
@@ -82,12 +85,11 @@
 
 
 <script>
-var about = '<p class="about-text">I am first a writer and an innovator, and I found a home in journalism. My passion is to explain complex problems in simple ways to educate audiences, whether it is by producing a graphic or shortening a graf. I want to use my programming and web skills to bring journalists &mdash; those who are trained best to inform others &mdash; to the audiences who need them.</p><p class="about-sub"><span style="font-weight:bold;font-size: 9pt;margin-right: 2px;">Other things I&#8217;m into:</span> <a href="http://bit.ly/1KKmYi4" target="_blank"><img id="steam-pic" src="assets/steam.png"/></a>, <img id="pokemon-pic" src="assets/pikachu.png" />, <a href="http://bit.ly/1MxqHqZ" target="_blank"><img id="universe-pic" src="assets/lion.png" /></a>, <a href="http://wrd.cm/1P1r0uf" target="_blank"><img id="gravity-pic" src="assets/cipher.png" /></a> </p>';
+var about = '<a id="about-scroll"><p class="about-text">I am first a writer and an innovator, and I found a home in journalism. My passion is to explain complex problems in simple ways to educate audiences, whether it is by producing a graphic or shortening a graf. I want to use my programming and web skills to bring journalists &mdash; those who are trained best to inform others &mdash; to the audiences who need them.</p><p class="about-sub"><span style="font-weight:bold;font-size: 9pt;margin-right: 2px;">Other things I&#8217;m into:</span> <a href="http://bit.ly/1KKmYi4" target="_blank"><img id="steam-pic" src="assets/steam.png"/></a>, <img id="pokemon-pic" src="assets/pikachu.png" />, <a href="http://bit.ly/1MxqHqZ" target="_blank"><img id="universe-pic" src="assets/lion.png" /></a>, <a href="http://wrd.cm/1P1r0uf" target="_blank"><img id="gravity-pic" src="assets/cipher.png" /></a> </p></a>';
 
-
-var codingPortfolio = '<div class="row"> <div class="col-lg-4 col-md-4 col-sm-12"> <a href="portfolio/orange-elections.html"><div id="code-port-1"></div> <p class="code-port-header">2015 Orange County Elections Guide</p> </div></a> <div class="col-lg-4 col-md-4 col-sm-12"> <a href="portfolio/j586-semifinal.html"><div id="code-port-2"></div> <p class="code-port-header">N.C. Campaign Finance Analysis</p> </div></a> <div class="col-lg-4 col-md-4 col-sm-12"> <a href="portfolio/reese.html"><div id="code-port-3"></div> <p class="code-port-header">Reese News Lab</p> </div></a></div><div class="row"> <div class="col-lg-12 col-sm-12"> <a id="more" href="#">More</a> </div>';
-
-var writingPortfolio = '<a href="http://www.durhamvoice.org/coding-and-community-with-girls-who-code/" target="_blank"><p>"Coding and Community with Girls Who Code"</p></a><hr><a href="http://www.durhamvoice.org/digital-divide-splits-diverse-groups/" target="_blank"><p>"Digital divide splits diverse groups"</p></a><div class="row"><a id="more-writing">More</a></div>';
+var codingPortfolio =
+'<div id="code-port" class="row"> <div class="col-lg-4 col-md-4 col-sm-12"> <a href="portfolio/orange-elections.html"> <div id="code-port-1"></div> <p class="code-port-header">2015 Orange County Elections Guide</p> </div></a> <div class="col-lg-4 col-md-4 col-sm-12"> <a href="portfolio/j586-semifinal.html"> <div id="code-port-2"></div> <p class="code-port-header">N.C. Campaign Finance Analysis</p> </div> </a> <div class="col-lg-4 col-md-4 col-sm-12"> <a href="portfolio/reese.html"> <div id="code-port-3"></div> <p class="code-port-header">Reese News Lab</p> </div></a> <div class="row"> <div class="col-lg-12 col-sm-12"> <a id="more" href="#">More</a> </div> </div> </div><!--/code port-->'
+var writingPortfolio = '<div id="write-port"><a href="http://www.durhamvoice.org/coding-and-community-with-girls-who-code/" target="_blank"><p>"Coding and Community with Girls Who Code"</p></a><hr><a href="http://www.durhamvoice.org/digital-divide-splits-diverse-groups/" target="_blank"><p>"Digital divide splits diverse groups"</p></a><div class="row"><a id="more-writing">More (coming soon!)</a></div></div>';
 
 $(document).ready(function(){
   $('.sub-port').hide();
@@ -102,6 +104,7 @@ $('#about').click(function(){
   //console.log("click");
   $('#content-box').empty();
   $('#content-box').append(about);
+  // $('#content-box').toggle();
 });
 
 $('#portfolio').click(function(){
@@ -124,7 +127,7 @@ $('#blog').click(function(){
   $('.sub-blog').toggle();
 });
 
-
+$('a').smoothScroll();
 
 </script>
 

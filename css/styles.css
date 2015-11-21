@@ -34,7 +34,7 @@ FAAE92 - darker pink
 /*DOM elements*/
 p{
   text-align:center;
-  font-size:30px;
+  font-size:40px;
   font-family:'OratorStd';
 }
 body:hover{
@@ -42,6 +42,7 @@ body:hover{
 }
 a, a:hover{
   color:black;
+  text-decoration:none;
 }
 
 
@@ -56,12 +57,12 @@ a, a:hover{
 }
 
 #title{
-  font-size:35px;
+  font-size:45px;
   font-family:'Silom';
 }
 
 #subtitle{
-  font-size:25px;
+  font-size:35px;
   font-family:'OratorStd';
 }
 
@@ -73,6 +74,9 @@ a, a:hover{
 
 
 /*about*/
+#about-scroll:hover{
+  text-decoration:none;
+}
 .about-text{
   font-family:'Georgia','serif';
   font-size:12pt;
@@ -103,6 +107,13 @@ li.no-tab{
   font-weight:bold;
 }
 
+.code-port-sub{
+  font-size:10pt;
+  margin-top:10px;
+  font-weight:bold;
+  text-decoration:underline;
+}
+
 #code-port-1{
   background-image:url('../assets/vote.png');
 }
@@ -122,6 +133,11 @@ li.no-tab{
   border-radius:3px;
 }
 
+.body-link{
+  color:#faae92;
+  text-decoration:underline;
+}
+
 @media (max-width:980px){
   #code-port-1, #code-port-2, #code-port-3{
     margin:0 0 20px 15vw;
@@ -132,6 +148,22 @@ li.no-tab{
   font-family:'OratorStd';
   font-size:20px;
   margin-top:10px;
+}
+
+/*.view-project{
+  color:black;
+  background-color:#FBC0AA;
+  border:3px solid #faae92;
+  width:100%;
+  font-family:'Georgia';
+  font-size:20pt;
+  border-radius:5px;
+  margin-bottom:10px;
+
+}*/
+
+i.temp-icon.fa.fa-external-link{
+  color:#faae92;
 }
 
 
@@ -179,4 +211,65 @@ li.no-tab{
 }
 #temp-img2{
   margin-top:20px;
+}
+.r-arrow, .l-arrow{
+  /*width: 40px;
+  height: 60px;*/
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right:0;
+  margin: auto;
+  height:29px;
+  width:70px;
+  background:#CAD788;
+  color:white;
+  border-radius: 70px 70px 0 0;
+  -moz-border-radius: 70px 70px 0 0;
+  -webkit-border-radius: 70px 70px 0 0;
+}
+.l-arrow{
+  margin-left:-20px;
+  right:auto;
+  left:0;
+  -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.r-arrow{
+  margin-right:-20px;
+  transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+}
+i.fa.fa-arrow-right, i.fa.fa-arrow-left{
+  font-size:19px;
+  padding:5px;
+}
+i.fa.fa-arrow-right{
+  transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+i.fa.fa-arrow-left{
+  transform: rotate(270deg);
+    -webkit-border-radius: 45px 45px 0 0;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+}
+
+@media (max-width:760px){
+  i.fa.fa-arrow-right, i.fa.fa-arrow-left{
+    font-size:19px;
+  }
+
 }
