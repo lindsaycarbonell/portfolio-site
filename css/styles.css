@@ -30,12 +30,26 @@ FAAE92 - darker pink
     to   { opacity: 1; }
 }*/
 
+/*featured*/
+
+.feat-title{
+    text-align: left;
+    font-size:20pt;
+    width:500px;
+    font-family:'Silom';
+
+}
+
 
 /*DOM elements*/
-p{
+p, li{
   text-align:center;
   font-size:40px;
   font-family:'OratorStd';
+}
+li{
+    display:inline-block;
+    margin:20px;
 }
 body:hover{
   cursor:default;
@@ -44,12 +58,36 @@ a, a:hover{
   color:black;
   text-decoration:none;
 }
+hr{
+    border-top:10px solid #CAD788;
+}
+table{
+    font-family:'Dosis';
+}
+th{
+    font-family:'Silom';
+}
 
+/*home*/
+
+#menu{
+    margin:20px;
+    margin-bottom:0px;
+}
 
 /*menu*/
+
+.menu{
+    font-size:20pt;
+}
 .menu:hover{
-  text-decoration:underline;
-  color:black;
+  color:#e19c83;
+}
+
+img.menu-ico{
+    height:20px;
+    vertical-align: text-bottom;
+    display:none;
 }
 
 .sub-port, .sub-blog{
@@ -70,6 +108,11 @@ a, a:hover{
 /*social icons*/
 .social:hover, .social:visited, .social:focus, .social:active{
   color:#FAAE92;
+}
+i.social.fa{
+    font-size:20pt;
+    margin:5pt;
+    margin-top:0;
 }
 
 
@@ -92,13 +135,34 @@ a, a:hover{
 }
 
 /*portfolio*/
+/*
 li{
   margin-left:-10px;
   list-style-type: none;
 }
+*/
 
 li.no-tab{
   margin-left:-40px;
+}
+
+.project-view, .github-view{
+    text-align:center;
+    border-radius:2px;
+    margin-bottom:20px;
+    padding:3px;
+    font-family:'Dosis';
+    font-size:10pt;
+    width:49%;
+    display:inline-block;
+}
+
+.project-view{    
+    background-color:#FBC0AA;    
+}
+
+.github-view{
+    background-color:#CAD788;
 }
 
 .code-port-header{
@@ -134,7 +198,7 @@ li.no-tab{
 }
 
 .body-link{
-  color:#faae92;
+  color:#e19c83;
   text-decoration:underline;
 }
 
@@ -162,21 +226,22 @@ li.no-tab{
 
 }*/
 
-i.temp-icon.fa.fa-external-link{
-  color:#faae92;
-}
+
 
 
 /*standards*/
 .container{
-  margin-top:10vw;
+/*  margin-top:10vw;*/
+    margin-top:2vw;
 }
+/*
 .coding:hover{
   color:#CAD788;
 }
 .writing:hover{
   color:#FBC0AA;
 }
+*/
 
 /*template*/
 .max-width{
@@ -191,7 +256,7 @@ i.temp-icon.fa.fa-external-link{
   color:#CAD788;
 }
 .temp-icon{
-  font-size:30px;
+  font-size:20px;
   margin:5px;
 }
 .temp-icon:hover{
@@ -272,4 +337,17 @@ i.fa.fa-arrow-left{
     font-size:19px;
   }
 
+}
+
+#copyright{
+    font-size:8pt;
+    float:right;
+}
+
+/*data tables*/
+div#port-table_filter, div#port-table_length, div#port-table_info, div#port-table_paginate{
+    display:none;
+}
+.table-img{
+    width:30pt;
 }

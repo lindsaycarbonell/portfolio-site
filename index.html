@@ -1,135 +1,145 @@
 <!DOCTYPE html>
 <head>
-  <title>Lindsay Carbonell, interactive storyteller</title>
+    <meta charset="UTF-8">
+<title>Lindsay M. Carbonell, interactive storyteller</title>
 <link rel="shortcut icon" type="image/ico" href="assets/favicon.ico" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="js/jquery.smooth-scroll.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="css/styles.css" />
 
+<script>
+$(document).ready(function() {
+    $('#port-table').DataTable({
+        responsive:true
+    });
+} );
+    
+</script>
 </head>
 
 <body>
-<div class="container">
-  <div class="row">
-      <div class="col-lg-12">
-          <p id="title">LINDSAY M. CARBONELL</p>
-          <p id="subtitle"><span class="coding">interactive</span> <span class="writing">storyteller</span></p>
-      </div>
-  </div>
-
-  <div class="row">
-      <div class="col-lg-4 col-lg-offset-4">
-          <p>
+    <div id="biggest-container">
+    <div class="max-width container">
+        <header class="row">
+            <p id="title">LINDSAY M. CARBONELL</p>
+            <p id="subtitle"><span class="coding">interactive</span> <span class="writing">storyteller</span></p>
+        </header>
+        
+        <hr>
+        
+        <div id="menu" class="row">
+            <div class="col-lg-2 col-sm-12"></div>
+            
+            <div class="col-lg-8 col-sm-12">
+                <ul>
+                    <img id="about-ico" class="menu-ico" src="assets/favicon.ico" /><li id="about" class="menu">ABOUT</li>
+                    <img id="port-ico" class="menu-ico" src="assets/favicon.ico" /><li id="portfolio" class="menu">PORTFOLIO</li>
+                    <a id="resume" target="_blank"><img id="resume-ico" class="menu-ico" src="assets/favicon.ico" /><li id="resume-li" class="menu">RESUME</li></a>
+                </ul>
+            </div>
+        
+            <div class="col-lg-2 col-sm-12"></div>
+        </div>
+        
+        <div id="append-content" class="row"></div>
+        
+        <hr>
+        
+        <footer class="row">
+            
             <a href="http://twitter.com/authoressence/" target="_blank"><i class="social fa fa-twitter"></i></a>
             <a href="http://github.com/lindsaycarbonell" target="_blank"><i class="social fa fa-github-alt"></i></a>
-            <a href="http://linkedin.com/in/lindsaycarbonell" target="_blank"><i class="social fa fa-linkedin"></i></a>
-          </p>
-      </div>
-  </div>
-
-  <div class="row">
-      <div class="col-lg-4 col-lg-offset-4">
-          <a href="#about-scroll" id="about" class="menu"><p>ABOUT</p></a>
-      </div>
-  </div>
-
-  <div class="row">
-      <div class="col-lg-4 col-lg-offset-4">
-        <ul>
-          <li class="no-tab">
-            <a id="portfolio" class="menu"><p>PORTFOLIO</p></a>
-              <ul>
-                <a href="#code-port"><li class="sub-port"><p id="code-port" class="coding"><i class="fa fa-code"></i> coding</p></li></a>
-                <a href="#write-port"><li class="sub-port"><p id="write-port" class="writing"><i class="fa fa-pencil"></i> writing</p></li></a>
-              </ul>
-          </li>
-        </ul>
-      </div>
-  </div>
-
-  <div class="row">
-      <div class="col-lg-4 col-lg-offset-4">
-          <a href="resume.pdf" id="resume" class="menu" target="_blank"><p>RESUME</p></a>
-      </div>
-  </div>
-
-  <!-- <div class="row">
-      <div class="col-lg-4 col-lg-offset-4">
-        <ul>
-          <li class="no-tab">
-            <a id="blog" class="menu"><p>BLOG</p></a>
-              <ul>
-                <a href="http://lindsaycodes.wordpress.com/" target="_blank">
-                  <li class="sub-blog">
-                    <p class="coding"><i class="fa fa-code"></i> coding</p>
-                  </li>
-                </a>
-                <a href="http://lmcarbonell.com/blog" target="_blank">
-                  <li class="sub-blog">
-                    <p class="writing"><i class="fa fa-pencil"></i> writing</p>
-                  </li>
-                </a>
-              </ul>
-          </li>
-        </ul>
-      </div>
-  </div> -->
-
-  <div class="row" style="margin-top:5vw;">
-      <div id="content-box" class="col-lg-8 col-lg-offset-2 col-sm-offset-2 col-sm-8 col-xs-10 col-xs-offset-1">
-      </div>
-  </div>
-</div><!--end container-->
-
-
+            <a href="http://linkedin.com/in/lindsaycarbonell" target="_blank"><i class="social fa fa-linkedin"></i>
+                
+        
+        </footer>
+        
+    </div>
+</div>
+        
 <script>
-var about = '<a id="about-scroll"><p class="about-text">I am first a writer and an innovator, and I found a home in journalism. My passion is to explain complex problems in simple ways to educate audiences, whether it is by producing a graphic or shortening a graf. I want to use my programming and web skills to bring journalists &mdash; those who are trained best to inform others &mdash; to the audiences who need them.</p><p class="about-sub"><span style="font-weight:bold;font-size: 9pt;margin-right: 2px;">Other things I&#8217;m into:</span> <a href="http://steamcommunity.com/id/Linoonely/" target="_blank"><img id="steam-pic" src="assets/steam.png"/></a>, <img id="pokemon-pic" src="assets/pikachu.png" />, <a href="http://bit.ly/1MxqHqZ" target="_blank"><img id="universe-pic" src="assets/lion.png" /></a>, <a href="http://wrd.cm/1P1r0uf" target="_blank"><img id="gravity-pic" src="assets/cipher.png" /></a> </p></a>';
+var about = '<a id="about-scroll"><p class="about-text">I am first a writer and an innovator, and I found a home in journalism. My passion is to explain complex problems in simple ways to educate audiences, whether it is by producing a graphic or shortening a graf. I want to use my programming and web skills to bring journalists &mdash; those who are trained best to inform others &mdash; to the audiences who need them.</p><!--<p class="about-sub"><span style="font-weight:bold;font-size: 9pt;margin-right: 2px;">Other things I&#8217;m into:</span> <a href="http://steamcommunity.com/id/Linoonely/" target="_blank"><img id="steam-pic" src="assets/steam.png" alt="" /></a>, <img id="pokemon-pic" src="assets/pikachu.png" alt="" />, <a href="http://bit.ly/1MxqHqZ" target="_blank"><img id="universe-pic" src="assets/lion.png" /></a>, <a href="http://wrd.cm/1P1r0uf" target="_blank"><img id="gravity-pic" src="assets/cipher.png" alt="" /></a> </p></a>-->';
 
-var codingPortfolio =
-'<div id="code-port" class="row"> <div class="col-lg-4 col-md-4 col-sm-12"> <a href="portfolio/orange-elections.html"> <div id="code-port-1"></div> <p class="code-port-header">2015 Orange County Elections Guide</p> </div></a> <div class="col-lg-4 col-md-4 col-sm-12"> <a href="portfolio/j586-semifinal.html"> <div id="code-port-2"></div> <p class="code-port-header">N.C. Campaign Finance Analysis</p> </div> </a> <div class="col-lg-4 col-md-4 col-sm-12"> <a href="portfolio/reese.html"> <div id="code-port-3"></div> <p class="code-port-header">Reese News Lab</p> </div></a> <div class="row"> <div class="col-lg-12 col-sm-12"> <a id="more" href="#">More</a> </div> </div> </div><!--/code port-->'
-var writingPortfolio = '<div id="write-port"><a href="http://www.durhamvoice.org/coding-and-community-with-girls-who-code/" target="_blank"><p>"Coding and Community with Girls Who Code"</p></a><hr><a href="http://www.durhamvoice.org/digital-divide-splits-diverse-groups/" target="_blank"><p>"Digital divide splits diverse groups"</p></a><div class="row"><a id="more-writing">More (coming soon!)</a></div></div>';
+var portfolio = '<div class="max-width container"> <div class="row"> <div class="col-lg-4 col-md-4 col-sm-12"> <div class="row"> <div class="col-lg-12 col-sm-12"> <p class="feat-title">Reese News Lab</p> <a href="http://reesenewslab.org/projects/blue-wagon/" target="_blank" style="vertical-align:middle;"><div class="project-view">Project<i class="temp-icon fa fa-external-link"></i></div></a> <a href="https://github.com/lindsaycarbonell/reese-proto" target="_blank" style="vertical-align:middle;"><div class="github-view">Github<i class="temp-icon fa fa-github-alt"></i></div></a> <p class="temp-content"><span class="temp-header">Internship from:</span> May - Aug 2015</p> <p class="temp-content"><span class="temp-header">Primary tool:</span> Google API, Adobe Premiere</p> <p class="temp-content">During an internship at Reese News Lab, I and my team pitched a startup through the lens of journalistic intent: to help people make better, more informed decisions about their lives. After <a href="http://reesenewslab.org/2015/06/12/when-your-idea-dies-hack-it-out/" class="body-link" target="_blank">many hurtles and problem solving</a>, our team came up with a product that simplifies the inundation of information a homebuyer is faced with in the real estate market through a <a href="http://lmcarbonell.com/static/reese-proto/" class="body-link" target="_blank">map and video product</a>.</p> </div> </div> </div><!--end col 1/3--> <div class="col-lg-4 col-md-4 col-sm-12"> <div class="row"> <div class="col-lg-12 col-sm-12"> <p class="feat-title">SQL Library</p> <a href="http://lmcarbonell.com/static/my-sql-library" target="_blank" style="vertical-align:middle;"><div class="project-view">Project<i class="temp-icon fa fa-external-link"></i></div></a> <a href="http://github.com/lindsaycarbonell/library-project" target="_blank" style="vertical-align:middle;"><div class="github-view">Github<i class="temp-icon fa fa-github-alt"></i></div></a> <p class="temp-content"><span class="temp-header">Project completed:</span> in progress</p> <p class="temp-content"><span class="temp-header">Primary tool:</span> MAMP</p> <p class="temp-content">I am currently building a personal library of books as a project over my winter break. The library will eventually....HERE HERE</p> </div> </div> </div><!--end col 2/3--> <div class="col-lg-4 col-md-4 col-sm-12"> <div class="row"> <div class="col-lg-12 col-sm-12"> <p class="feat-title">Campaign Finance</p> <a href="http://lmcarbonell.com/static/j586-semifinal" target="_blank" style="vertical-align:middle;"><div class="project-view">Project<i class="temp-icon fa fa-external-link"></i></div></a> <a href="https://github.com/lindsaycarbonell/j586-semifinal" target="_blank" style="vertical-align:middle;"><div class="github-view">Github<i class="temp-icon fa fa-github-alt"></i></div></a> <p class="temp-content"><span class="temp-header">Project completed:</span> April 2015</p> <p class="temp-content"><span class="temp-header">Primary tool:</span> AJAX</p> <p class="temp-content">**Class project required use of a news media organization&#39;s style; this project is not affiliated with NPR.** This project uses data from the Sunlight Foundation and OpenSecrets to compare the contributions received by N.C. congresspeople in the U.S. House of Representatives in 2013.</p> </div> </div> </div><!--end col 3/3--> </div> <table id="port-table" class="display" cellspacing="0" width="100%"> <thead> <tr> <th>Project</th> <th>Link</th> <th>Github</th> <th>Date Completed</th> <th>Primary Tool</th> <th>Description</th> </tr> </thead> <tbody> <tr> <td>Election Guide</td> <td><a href="http://lmcarbonell.com/static/orange-elections"><i class="temp-icon fa fa-external-link"></i></a></td> <td><a href="https://github.com/lindsaycarbonell/orange-elections"><i class="temp-icon fa fa-github-alt"></i></a></td> <td>Oct 2015</td> <td>API Integration</td> <td>This project was completed as a replacement for a class project on API integration that was completed in April 2015. This campaign guide for the 2015 Orange County elections was adapted from the Daily Tar Heel&#39;s <a href="http://www.scribd.com/doc/286399656/The-Daily-Tar-Heel-for-Oct-22-2015" class="body-link" target="_blank">print election guide</a>.</td> </tr> <tr> <td>CARE Malawi</td> <td><a href="http://raisingthescore.org/"><i class="temp-icon fa fa-external-link"></i></a></td> <td>(none)</td> <td>May 2015</td> <td>Wordpress CMS, PHP</td> <td>This project was completed for an NGO client through a semester-long class project. My primary job on the project was to write PHP and JavaScript for the Wordpress site, build page templates for interactives, and debug.</td> </tr> <tr> <td>Writing App</td> <td><a href="https://share.appgyver.com/?id=87506&hash=7e3725bd4de770d932ccb1ce680a88e47628cc368261a99b4a7f558dd040ee9c<"><i class="temp-icon fa fa-external-link"></i></a></td> <td><a href="https://github.com/lindsaycarbonell/writing-app"><i class="temp-icon fa fa-github-alt"></i></a></td> <td>December 2015</td> <td>AngularJS, Parse, JavaScript/jQuery</td> <td>Description</td> </tr> <tr> <td>Durham VOICE</td> <td><a href="http://durhamvoice.org/"><i class="temp-icon fa fa-external-link"></i></a></td> <td>(none)</td> <td>in progress</td> <td>Primary Tool</td> <td>Description</td> </tr> <tr> <td>Driven Media</td> <td><a href="http://drivenmedia.org/making-peace-homepage/"><i class="temp-icon fa fa-external-link"></i></a></td> <td>(none)</td> <td>November 2015</td> <td>PHP, SVG</td> <td>For this project, I put together the already-designed homepage and inner pages for Driven Media&#39;s story. I used SVG to make the responsive homepage, and entered the content for the inner pages.</td> </tr> <tr> <td>Caffeine Graphic</td> <td><a href="http://www.dailytarheel.com/article/2015/04/caffeine-tablets-and-powder-can-pose-serious-problems-for-students"><i class="temp-icon fa fa-external-link"></i></a></td> <td><a href="https://github.com/DTH-i-team/DTH-i-team.github.io/tree/master/DrugIssue/caff-graphic"><i class="temp-icon fa fa-github-alt"></i></a></td> <td>April 2015</td> <td>JavaScript/jQuery</td> <td>This interactive, located at the bottom of the article, was completed during my time as leader of the interactives team at the Daily Tar Heel. The JavaScript was written by me, and the design was done by Devin Beauchamp.</td> </tr> <tr> <td>CampWrite UNC</td> <td><a href="http://campwriteunc.com/"><i class="temp-icon fa fa-external-link"></i></a></td> <td>(none)</td> <td>April 2015</td> <td>Wordpress CMS</td> <td>This was one of the first websites I built outside of class. It was developed from the _tk Bootstrap Wordpress theme and is used to help recruit campers and counselors for CampWrite UNC, a free two-week creative writing camp for middle- and high-school students.</td> </tr> </tbody> </table> </div>';
+    
+var resume ='<!--<div class="col-lg-12 col-sm-12"><a href="resume.pdf" download>Download PDF</a></div>--><div class="col-lg-12 col-sm-12"><iframe src="https://docs.google.com/viewer?url=http://lmcarbonell.com/resume.pdf&embedded=true" width="100%" height="1000px"></iframe></div>';
 
-$(document).ready(function(){
-  $('.sub-port').hide();
-  $('.sub-blog').hide();
-});
+//$(document).ready(function(){
+//  $('.sub-port').hide();
+//  $('.sub-blog').hide();
+//});
 
 // $('.menu').click(function(){
 //   $('#content-box').empty();
 // });
 
+$(document).ready(function(){
+    $('#about').css('text-decoration', 'underline');
+    $('#append-content').append(about);
+});
+
 $('#about').click(function(){
-  //console.log("click");
-  $('#content-box').empty();
-  $('#content-box').append(about);
+    $('#about').css('text-decoration', 'underline');
+    $('#resume-li').css('text-decoration', 'none');
+    $('#portfolio').css('text-decoration', 'none');
+    
+    $('#about-ico').css('display','inline');
+    $('#port-ico').css('display','none');
+    $('#resume-ico').css('display','none');
+    
+    $('#append-content').empty();
+    $('#append-content').append(about);
   // $('#content-box').toggle();
 });
 
 $('#portfolio').click(function(){
-  $('.sub-blog').hide();
-  $('.sub-port').toggle();
+    $('#portfolio').css('text-decoration', 'underline');
+    $('#about').css('text-decoration', 'none');
+    $('#resume-li').css('text-decoration', 'none');
+    
+    $('#port-ico').css('display','inline');
+    $('#about-ico').css('display','none');
+    $('#resume-ico').css('display','none');
+    
+    $('#append-content').empty();
+    $('#append-content').append(portfolio);
+       
+    startTable();
 });
+    
+$('#resume').click(function(){
+    $('#resume-li').css('text-decoration', 'underline');
+    $('#about').css('text-decoration', 'none');
+    $('#portfolio').css('text-decoration', 'none');
+    
+    $('#resume-ico').css('display','inline');
+    $('#about-ico').css('display','none');
+    $('#port-ico').css('display','none');
+    
+    $('#append-content').empty();
+    $('#append-content').append(resume);
 
-$('#code-port').click(function(){
-  $('#content-box').empty();
-  $('#content-box').append(codingPortfolio);
+startTable();
 });
+    
 
-$('#write-port').click(function(){
-  $('#content-box').empty();
-  $('#content-box').append(writingPortfolio);
-});
+       
+</script>
+        
+<script>
+function startTable(){
+    console.log("start table");
+    $('#port-table').DataTable({
+        responsive:true
+    });
 
-$('#blog').click(function(){
-  $('.sub-port').hide();
-  $('.sub-blog').toggle();
-});
-
-$('a').smoothScroll();
-
+}
 </script>
 
 </body>
-</html>
+
+    </html>
