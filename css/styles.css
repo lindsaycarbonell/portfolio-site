@@ -15,6 +15,8 @@ FAAE92 - darker pink
     src: url(../fonts/OratorStd.otf);
 }
 @import url(https://fonts.googleapis.com/css?family=Dosis);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 
 /*font fix*/
 /*body {
@@ -51,6 +53,9 @@ li{
     display:inline-block;
     margin:20px;
 }
+body{
+  background-color:#EFF3DB;
+}
 body:hover{
   cursor:default;
 }
@@ -59,7 +64,7 @@ a, a:hover{
   text-decoration:none;
 }
 hr{
-    border-top:10px solid #CAD788;
+    border-top:10px solid #FBC0AA;
 }
 table{
     font-family:'Dosis';
@@ -157,8 +162,8 @@ li.no-tab{
     display:inline-block;
 }
 
-.project-view{    
-    background-color:#FBC0AA;    
+.project-view{
+    background-color:#FBC0AA;
 }
 
 .github-view{
@@ -350,4 +355,116 @@ div#port-table_filter, div#port-table_length, div#port-table_info, div#port-tabl
 }
 .table-img{
     width:30pt;
+}
+
+
+/*portfolio*/
+
+/*#clips-list {
+width: 80%;
+margin: 30px auto;
+font-family: sans-serif;
+}*/
+
+/*h3 {
+text-align: center;
+font-size: 1.65em;
+margin: 0 0 30px;
+}*/
+
+#clips-list {
+display: flex;
+flex-wrap: wrap;
+}
+
+.clip-link {
+display: inline-block;
+margin-bottom: 8px;
+width: calc(50% - 4px);
+margin-right: 8px;
+text-decoration: none;
+color: black;
+
+}
+
+.clip-link:nth-of-type(2n) {
+margin-right: 0;
+}
+
+@media screen and (min-width: 50em) {
+.clip-link {
+  width: calc(25% - 6px);
+}
+
+.clip-link:nth-of-type(2n) {
+  margin-right: 8px;
+}
+
+.clip-link:nth-of-type(4n) {
+  margin-right: 0;
+}
+}
+
+.clip-link:hover img {
+transform: scale(1.15);
+}
+
+figure {
+margin: 0;
+overflow: hidden;
+}
+
+figcaption {
+margin-top: 15px;
+}
+
+.clip-img {
+border: none;
+max-width: 100%;
+height: auto;
+display: block;
+background: #ccc;
+transition: transform .2s ease-in-out;
+vertical-align: baseline;
+}
+
+/*.p a {
+display: inline;
+font-size: 13px;
+margin: 0;
+text-decoration: underline;
+color: blue;
+}
+
+.p {
+text-align: center;
+font-size: 13px;
+padding-top: 100px;
+}*/
+
+.fig-title, .fig-blurb, .fig-tools{
+text-align:left;
+font-family: 'Open Sans', sans-serif;
+
+}
+
+figcaption, .fig-title, .fig-tools, .fig-blurb{
+margin-top:5pt;
+margin-bottom:1pt;
+}
+.fig-blurb{
+font-size:10pt;
+}
+.fig-tools{
+font-size:10pt;
+margin-top:1pt;
+}
+
+@media screen and (max-width:650px){
+.clip-link{
+  width:calc(100% - 6px);
+}
+figcaption{
+  display:none;
+}
 }
